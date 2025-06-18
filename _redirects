@@ -1,3 +1,6 @@
-# Redirects from what the browser requests to what we serve
-/home                https://nnk000.github.io/index.html              200
-/page                https://nnk000.github.io/pages/another-page.html 200
+# Main page redirect (index.html → /main)
+/index.html    /main    200
+/              /main    200  # Optional - makes root path serve same content
+
+# Nested page redirect (pages/another-page.html → /other-page)
+/pages/another-page.html    /other-page    200
