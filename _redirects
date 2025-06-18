@@ -1,6 +1,12 @@
-# Main page redirect (index.html → /main)
-/index.html    /main    200
-/              /main    200  # Optional - makes root path serve same content
+# Main page rewrites (serve content without .html showing)
+/              /main        200
+/main          /index.html  200
+/index.html    /main        301  # Redirect if someone accesses directly
 
-# Nested page redirect (pages/another-page.html → /other-page)
-/pages/another-page.html    /other-page    200
+# Nested page rewrites
+/other-page    /pages/another-page.html  200
+/pages/another-page.html    /other-page  301  # Redirect if accessed directly
+
+# Optional: Catch-all for other HTML files
+/*.html        /:splat      200
+/:path.html    /:path       301
