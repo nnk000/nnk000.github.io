@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:site_name" content="HammerWebV2.com" />
+	<title>FumoWeb V2.2</title>
+	
+	<style>
+    body {
+      margin: 0;
+      height: 100vh;
+    }
+	#bg-toggle {
+		display: none;
+	}
+
+	#bg-day-night {
+		width: 100%;
+		height: 100%;
+		background-image: url("bg-day.gif");
+		position: absolute;
+		z-index: -1;
+	}
+	
+	.button-day-night {
+      padding: 32px 16px;
+      background-image: url('light-switch-night.png');
+      position: fixed;
+      top: 24px;
+      right: 48px;
+      cursor: pointer;
+      z-index: 10;
+	}
+
+    #bg-toggle:checked ~ #bg-day-night {
+      background-image: url('bg-night.gif');
+    }
+    #bg-toggle:checked ~ .button-day-night {
+      background-image: url('light-switch-day.png');
+    }
+
+	.content {
+		position: relative;
+		z-index: 1;
+		color: white;
+		padding: 20px;
+	}
+
+	.header-stl {
+		position: relative;
+		z-index: 1;
+		color: Khaki;
+		padding: 20px;
+		text-align: center;
+	}
+
+    #bg-toggle:checked ~ .header-stl {
+		color: Black;
+    }
+
+	</style>
+	
+</head>
+
+<body>
+
+	<input type="checkbox" id="bg-toggle">
+	<label for="bg-toggle" class="button-day-night"></label>
+	<div id="bg-day-night"></div>
+
+	<div class="content">
+		<h1 class="header-stl">This</h1>
+	</div>
+
+</body>
+
+</html>
+
