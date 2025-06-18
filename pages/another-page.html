@@ -19,14 +19,14 @@
 	#bg-day-night {
 		width: 100%;
 		height: 100%;
-		background-image: url("bg-day.gif");
+		background-image: url("/bg-day.gif");
 		position: absolute;
 		z-index: -1;
 	}
 	
 	.button-day-night {
       padding: 32px 16px;
-      background-image: url('light-switch-night.png');
+      background-image: url('/light-switch-night.png');
       position: fixed;
       top: 24px;
       right: 48px;
@@ -35,10 +35,10 @@
 	}
 
     #bg-toggle:checked ~ #bg-day-night {
-      background-image: url('bg-night.gif');
+      background-image: url('/bg-night.gif');
     }
     #bg-toggle:checked ~ .button-day-night {
-      background-image: url('light-switch-day.png');
+      background-image: url('/light-switch-day.png');
     }
 
 	.content {
@@ -71,9 +71,9 @@
 	<div id="bg-day-night"></div>
 
 	<div class="content">
-		<h1 class="header-stl">Обычный текст</h1>
-		<a href="pages/another-page.html">
-			<button>Button</button>
+		<h1 class="header-stl">Теперь текст другого цвета и в другой директории</h1>
+		<a href="/index.html">
+			<button>Обратно</button>
 		</a>
 	</div>
 
